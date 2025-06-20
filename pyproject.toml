@@ -1,0 +1,12 @@
+[project]
+name = "okane-bot"
+version = "0.1.0"
+description = "A simple telegram bot for Okane studio"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "python-telegram-bot>=22.1",
+    "telethon>=1.40.0",
+    "vk-api>=11.9.9",
+    "yt-dlp>=2025.6.9",
+]

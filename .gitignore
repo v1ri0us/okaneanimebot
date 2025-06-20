@@ -1,0 +1,14 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+videos/
+wheels/
+*.egg-info
+uv.lock
+# Virtual environments
+.venv
+# MacOS files
+.DS_Store
+session_name.session
