@@ -56,14 +56,11 @@ def parse_filename(filename):
 
 def scan_directory(directory, recursive=False):
     """Сканирует директорию и выводит отладочную информацию"""
-    print(f"\nСканирую директорию: {directory}")  # Отладочная печать
     results = []
     for item in Path(directory).iterdir():
-        print(f"Обрабатываю: {item.name}")  # Отладочная печать
         if item.is_file():
             parsed = parse_filename(item.name)
             if parsed:
-                print(f"Найдено совпадение: {item.name} -> {parsed}")  # Отладочная печать
                 results.append({
                     "file": item.name,
                     "path": str(item),
@@ -109,4 +106,3 @@ if __name__ == "__main__":
         writer = csv.DictWriter(f, fieldnames=["episode", "title", "dub_type", "file", "path"])
         writer.writeheader()
         writer.writerows(results)
-    print(f"\nРезультаты сохранены в {csv_path}")
