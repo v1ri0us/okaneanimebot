@@ -15,7 +15,7 @@ def parse_filename(filename):
         (?P<title>.+?)  # Нежадное совпадение
         (?:\s*-\s*)?    # Опциональный дефис
         \s*
-        (?P<dub_type>Рекаст|Редаб|Озвучка\s*Аниме\s*\|\s*Окане|Озвучка\s*Аниме|Окане)?
+        (?P<dub_type>Рекаст|Редаб||Озвучка)?
         $
     """
     match = re.search(pattern, name_without_ext, re.VERBOSE | re.IGNORECASE)
